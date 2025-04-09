@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+.next/
+dist/
+
+# Environment files
+.env*.local
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local Development
+*.local
