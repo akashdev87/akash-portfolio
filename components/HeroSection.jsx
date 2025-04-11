@@ -65,7 +65,7 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      {/* Right: Image or illustration */}
+      {/* Right: Image or illustration
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -77,7 +77,7 @@ export default function HeroSection() {
           alt="Profile Illustration"
           className="w-80 md:w-96 object-contain rounded-2xl shadow-lg"
         />
-      </motion.div>
+      </motion.div> */}
     </section>
   )
 }
