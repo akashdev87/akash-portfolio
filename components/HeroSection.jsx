@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiLinkedin, FiDownload } from 'react-icons/fi'
+import { FiLinkedin } from 'react-icons/fi'
 
 const name = "Akash Devmare";
 
@@ -18,12 +18,13 @@ const letterDrop = {
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center px-6 md:px-12 lg:px-24">
+    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between gap-12 px-6 md:px-12 lg:px-24">
+      {/* Left: Animated text content */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="glass-effect rounded-3xl p-8 md:p-12"
+        className="glass-effect rounded-3xl p-8 md:p-12 w-full lg:w-1/2"
       >
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 flex flex-wrap">
           {name.split("").map((letter, index) => (
@@ -62,6 +63,20 @@ export default function HeroSection() {
             <span>LinkedIn</span>
           </motion.a>
         </div>
+      </motion.div>
+
+      {/* Right: Image or illustration */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="w-full lg:w-1/2 flex justify-center"
+      >
+        <img 
+          src="/akash.png" 
+          alt="Profile Illustration"
+          className="w-80 md:w-96 object-contain rounded-2xl shadow-lg"
+        />
       </motion.div>
     </section>
   )
