@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
-        <title>Akash's Portfolio</title>
+        <title>Akashs Portfolio</title>
         <meta
           name="description"
-          content="Akash Devmare's professional portfolio"
+          content="Akash Devmares professional portfolio"
         />
       </Head>
       <Navbar />
