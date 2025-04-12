@@ -4,14 +4,37 @@ const experiences = [
   {
     company: "Vesatogo Innovations",
     role: "Business & Operations Associate",
-    duration: "2022 - Present",
+    duration: "Aug 2022 - Mar 2025",
     points: [
-      "Managed operations for product delivery coordination",
-      "Conducted market research for customer identification",
-      "Developed business relationships with stakeholders"
+      "Led end-to-end software operations ensuring on-time delivery and performance optimization",
+      "Managed cross-functional teams to streamline workflows and improve system efficiency",
+      "Drove adoption of supply chain management (SCM) software",
+      "Oversaw QA/testing processes to reduce defects and ensure compliance",
+      "Implemented Agile/Scrum methodologies for project execution"
     ]
   },
-  // Add other experiences
+  {
+    company: "Sahyadri Farmers Producer Company Limited",
+    role: "Product Operations Lead",
+    duration: "Jan 2022 - Aug 2022",
+    points: [
+      "Implemented supply chain management software solutions (Vesatogo & SAP)",
+      "Conducted market analysis to identify software requirements and improvement opportunities",
+      "Trained employees on digital tools and operational processes",
+      "Collaborated with technical teams to resolve system bottlenecks",
+      "Developed operational documentation and standard procedures"
+    ]
+  },
+  {
+    company: "Sahyadri Farmers Producer Company Limited",
+    role: "Business Development Officer",
+    duration: "Jun 2021 - Mar 2022",
+    points: [
+      "Established strategic partnerships to expand farmer networks",
+      "Supported market expansion initiatives and growth strategies",
+      "Facilitated new supply chain partnerships"
+    ]
+  },
 ]
 
 export default function Experience() {
@@ -31,21 +54,22 @@ export default function Experience() {
             key={idx}
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
             className="glass-effect p-8 rounded-2xl"
           >
             <div className="flex justify-between items-start mb-4">
               <div>
                 <h3 className="text-xl md:text-2xl font-semibold text-white">{exp.role}</h3>
-                <p className="text-white/80">{exp.company}</p>
+                <p className="text-white/80 mt-1">{exp.company}</p>
               </div>
-              <span className="text-white/60">{exp.duration}</span>
+              <span className="text-white/60 text-sm md:text-base">{exp.duration}</span>
             </div>
             
             <ul className="space-y-2">
               {exp.points.map((point, i) => (
-                <li key={i} className="text-white/80 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-white/50 rounded-full" />
-                  {point}
+                <li key={i} className="text-white/80 flex items-start gap-2">
+                  <div className="w-2 h-2 bg-white/50 rounded-full mt-2" />
+                  <span>{point}</span>
                 </li>
               ))}
             </ul>
